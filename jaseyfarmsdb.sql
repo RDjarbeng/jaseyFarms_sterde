@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2020 at 04:49 AM
+-- Generation Time: Sep 10, 2020 at 06:27 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `jaseyfarms`
 --
+CREATE DATABASE IF NOT EXISTS `jaseyfarms` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `jaseyfarms`;
 
 -- --------------------------------------------------------
 
@@ -105,113 +107,6 @@ INSERT INTO `aboutpage_strategic_Positioning` (`id`, `title`, `content`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `aboutpage_strategy`
---
-
-CREATE TABLE `aboutpage_strategy` (
-  `id` int(11) NOT NULL,
-  `heading` varchar(255) NOT NULL,
-  `subheading` varchar(400) NOT NULL,
-  `sub1` varchar(100) NOT NULL,
-  `sub2` varchar(100) NOT NULL,
-  `sub3` varchar(100) NOT NULL,
-  `cont1` varchar(500) NOT NULL,
-  `cont2` varchar(500) NOT NULL,
-  `cont3` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `aboutpage_strategy`
---
-
-INSERT INTO `aboutpage_strategy` (`id`, `heading`, `subheading`, `sub1`, `sub2`, `sub3`, `cont1`, `cont2`, `cont3`) VALUES
-(1, '', '', 'Vision', 'Mission', 'Values', 'To provide our clients with quality quarrying and mining support services that enable clients to create more value.', 'To apply world-class quarrying and mining tools, techniques, and experience to help our client exploit their ore reserves.', '* Safety<br>\r\n											* Stakeholder engagement<br>\r\n											* Delivery<br>\r\n											* Efficiency<br>\r\n											* Environmentally conscious');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `footer`
---
-
-CREATE TABLE `footer` (
-  `id` int(11) NOT NULL,
-  `careers_title` varchar(255) NOT NULL,
-  `careers` varchar(500) NOT NULL,
-  `contact_title` varchar(255) NOT NULL,
-  `contact_companyname` varchar(255) NOT NULL,
-  `contact_location` varchar(255) NOT NULL,
-  `contact_digital` varchar(255) NOT NULL,
-  `contact_postal` varchar(255) NOT NULL,
-  `contact_email` varchar(255) NOT NULL,
-  `contact_telephone` varchar(255) NOT NULL,
-  `links_title` varchar(255) NOT NULL,
-  `link1` varchar(255) NOT NULL,
-  `link2` varchar(255) NOT NULL,
-  `link3` varchar(255) NOT NULL,
-  `link4` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `gallerypage`
---
-
-CREATE TABLE `gallerypage` (
-  `id` int(11) NOT NULL,
-  `projectimg` text NOT NULL,
-  `des` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `gallerypage`
---
-
-INSERT INTO `gallerypage` (`id`, `projectimg`, `des`) VALUES
-(1, 'bgal_1.jpeg', 'Project name and description'),
-(2, 'bgal_3.jpeg', 'Project name and description'),
-(3, 'bgal_6.jpeg', 'Project name and description'),
-(4, 'bgal_2.jpeg', 'Project name and description'),
-(5, 'bgal_17.jpeg', 'Project name and description'),
-(6, 'bgal_18.jpeg', 'Project name and description\r\n\r\n'),
-(7, 'bgal_19.jpeg', 'Project name and description\r\n\r\n'),
-(8, 'bgal_20.jpeg', 'Project name and description\r\n\r\n'),
-(9, 'bgal_21.jpeg', 'Project name and description\r\n\r\n'),
-(10, 'bgal_22.jpeg', 'Project name and description\r\n\r\n'),
-(11, 'bgal_10.jpeg', 'Project name and description\r\n\r\n'),
-(12, 'bgal_11.jpeg', 'Project name and description\r\n\r\n'),
-(13, 'bgal_12.jpeg', 'Project name and description\r\n\r\n'),
-(14, 'bgal_13.jpeg', 'Project name and description\r\n\r\n'),
-(15, 'bgal_14.jpeg', 'Project name and description\r\n\r\n'),
-(16, 'bgal_15.jpeg', 'Project name and description\r\n\r\n'),
-(17, 'bgal_16.jpeg', 'Project name and description\r\n\r\n'),
-(18, 'bgal_17.jpeg', 'Project name and description\r\n\r\n');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `gallerypage_product`
---
-
-CREATE TABLE `gallerypage_product` (
-  `id` int(11) NOT NULL,
-  `productimg` text NOT NULL,
-  `des` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `gallerypage_product`
---
-
-INSERT INTO `gallerypage_product` (`id`, `productimg`, `des`) VALUES
-(1, 'b_10.jfif', 'Project name and description\r\n\r\n'),
-(2, 'b_11.jpg', 'Project name and description\r\n\r\n'),
-(3, 'b_13.jpg', 'Project name and description\r\n\r\n'),
-(4, 'b_17.jpg', 'Project name and description\r\n\r\n');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `homepage_aboutus`
 --
 
@@ -231,7 +126,7 @@ CREATE TABLE `homepage_aboutus` (
 --
 
 INSERT INTO `homepage_aboutus` (`id`, `about_heading`, `about_subheading1`, `about_content1`, `about_subheading2`, `about_content2`, `about_subheading3`, `about_content3`) VALUES
-(1, 'About Us\r\n', 'Our Objective', 'Our objective is to improve the well-being of our consumers through the cultivation and supply of well-grown farm products with specific emphasis on vegetables.', 'Our Mission', 'Our focus is to develop our greenhouse farming know-how, capability, and output progressively to enable us to supply fresh, healthy, and quality vegetables at competitive rates with the least impact on the environment.', 'Our Approach', 'Our approach involves using a greenhouse-controlled environment for farming various vegetables in commercial quantities using no pesticides in the cultivation process. More so, we mindfully endeavor to ensure less usage of water and energy to lower our carbon footprint. We believe in sustainable farming to meet the needs of our growing population.');
+(1, 'About Us', 'Our Objective', 'Our objective is to improve the well-being of our consumers through the cultivation and supply of well-grown farm products with specific emphasis on vegetables.', 'Our Mission', 'Our focus is to develop our greenhouse farming know-how, capability, and output progressively to enable us to supply fresh, healthy, and quality vegetables at competitive rates with the least impact on the environment.', 'Our Approach', 'Our approach involves using a greenhouse-controlled environment for farming various vegetables in commercial quantities using no pesticides in the cultivation process. More so, we mindfully endeavor to ensure less usage of water and energy to lower our carbon footprint. We believe in sustainable farming to meet the needs of our growing population.');
 
 -- --------------------------------------------------------
 
@@ -387,27 +282,6 @@ INSERT INTO `homepage_footer_products` (`id`, `products`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `homepage_gallery`
---
-
-CREATE TABLE `homepage_gallery` (
-  `id` int(11) NOT NULL,
-  `gallery_img` text NOT NULL,
-  `gallery_description` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `homepage_gallery`
---
-
-INSERT INTO `homepage_gallery` (`id`, `gallery_img`, `gallery_description`) VALUES
-(1, 'bgal_9.jpeg', 'Project and short description'),
-(2, 'bgal_11.jpeg', 'Project and short description'),
-(3, 'bgal_10.jpeg', 'Project and short description');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `homepage_order`
 --
 
@@ -485,37 +359,6 @@ INSERT INTO `homepage_products_pictures` (`id`, `text`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `homepage_services`
---
-
-CREATE TABLE `homepage_services` (
-  `id` int(11) NOT NULL,
-  `services_heading` varchar(255) NOT NULL,
-  `services_subheading` varchar(255) NOT NULL,
-  `services_img` text NOT NULL,
-  `services_imgheading` varchar(255) NOT NULL,
-  `services_imgsubheading` varchar(255) NOT NULL,
-  `services_content` varchar(500) NOT NULL,
-  `services_img1` text NOT NULL,
-  `services_img2` text NOT NULL,
-  `services_imgheading1` varchar(255) NOT NULL,
-  `services_imgheading2` varchar(255) NOT NULL,
-  `services_imgsubheading1` varchar(255) NOT NULL,
-  `services_imgsubheading2` varchar(255) NOT NULL,
-  `services_content1` varchar(500) NOT NULL,
-  `services_content2` varchar(700) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `homepage_services`
---
-
-INSERT INTO `homepage_services` (`id`, `services_heading`, `services_subheading`, `services_img`, `services_imgheading`, `services_imgsubheading`, `services_content`, `services_img1`, `services_img2`, `services_imgheading1`, `services_imgheading2`, `services_imgsubheading1`, `services_imgsubheading2`, `services_content1`, `services_content2`) VALUES
-(1, 'Services\r\n', 'Big Ollay Ghana Limited Services include\r\n', 'b_28.jpg', 'Quarrying services', 'Quarrying services', 'In the quarry industry, BOGL provides:<br>\r\n									1.	Quarry mine startup technical design and business plan;<br>\r\n									2.	Installation of crushing set (jaw crusher, cone crusher, and screens) covering both mechanical and electric requirements;<br>\r\n									3.	Primary drilling and blasting services;<br>\r\n									4.	Secondary drilling and blasting services;<br>\r\n									5.	Acquisition of blast materials on behalf of clients. ', 'b_29.jpg', 'b_8.jfif', 'Mining consumables and safety Services', 'Project /Operational Management Services', 'Mining consumables and safety Services', 'Project /Operational Management Services', 'BOGL has always promoted and encouraged clients to use good quarry and mining consumables to ensure good health, safety, and output results.  The business executes supplies contracts on demand. BOGL supplies cover the following: <br>\r\n									1.	Quarry aggregates supplies;\r\n									2.	Sales of drilling equipment and accessories;<br>\r\n									3.	Sale of rubber tubing for blasting;<br>\r\n									4.	Renting of drill rigs and crushing sets.', 'At the project management and operational management section of the business.  We work with our clients’ base on their unique situations and challenges.  BOGL provide the following services based on our experience to date:<br>\r\n									1.	Build and hand over turkey projects;<br>\r\n									2.	Build, operate and hand over the project;<br>\r\n									3.	Provide project management services for agreed on the scope of work;<br>\r\n									4.	Provide and train clients’ staff on new and improved operational optimization techniques.');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `homepage_slide`
 --
 
@@ -537,27 +380,31 @@ INSERT INTO `homepage_slide` (`id`, `image`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `homepage_team`
+-- Table structure for table `portfolio`
 --
 
-CREATE TABLE `homepage_team` (
+CREATE TABLE `portfolio` (
   `id` int(11) NOT NULL,
-  `team_heading` varchar(255) NOT NULL,
-  `team_subheading` varchar(255) NOT NULL,
-  `team_img` text NOT NULL,
-  `team_title` varchar(255) NOT NULL,
-  `team_content` varchar(1200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `image` varchar(255) DEFAULT NULL,
+  `caption` varchar(255) DEFAULT NULL,
+  `heading_hover` varchar(255) DEFAULT NULL,
+  `subheading_hover` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `homepage_team`
+-- Dumping data for table `portfolio`
 --
 
-INSERT INTO `homepage_team` (`id`, `team_heading`, `team_subheading`, `team_img`, `team_title`, `team_content`) VALUES
-(1, 'Meet Our Team\r\n', 'We work to provide quality drilling and blasting services\r\n\r\n', 't1.jpg', 'Rev. Joshua Ollennu(C.E.O)', 'Rev. Joshua Ollennu is an astute engineer with vast practical experience in handling drilling and blasting of various rocks or ore bodies.  Some rock formations he has worked on include gold, granite, feldspar and limestone ore bodies.  He is also the founder of the company, and he is well vest in the field of mining.  He holds both an MSc and Diploma in Mining Engineering from the University of Mines and Technology. Over the past fifteen (15) years, he has provided consultancy, design, and operational services for many clients in the quarry and alluvial gold mining industry in Ghana.  His track record of continuous delivery is due to his excellent communication, interpersonal, organizational, and team-building skills.  Plus, his ability to develop innovative solutions in the field of mining and quarrying.  Some of his working exposures are with Ghana Consolidated Diamonds Limited, Nsemmere Quarry Limited, Mawums Quarry Limited, Biga Gold Mining Ltd, GDC Limited, various Sea defense projects, and many smaller entities. '),
-(2, 'Meet Our Team\r\n', 'We work to provide quality drilling and blasting services\r\n\r\n', 't4.jpg', 'Mrs. Doris Ollennu (Director & Head of business development)', 'Mrs. Doris Ollennu is the head of business development and also a co-founder of the company.  She is the longest-serving employee.  Mrs. Ollennu is in charge of all administrative activities in the office at Takoradi in the West Region.  She also works to meet all the company’s human resources, finance, correspondence, contract administration, and vendor management needs.  With vast experience in the job, she works to ensure that the company always understand, meet, and exceed the expectations of all clients.'),
-(3, 'Meet Our Team\r\n', 'We work to provide quality drilling and blasting services\r\n\r\n', 't2.jpg', 'Mr. Joseph Norgah (Project Manager)', 'Mr. Joseph Norgah is the current Project Manager of the Company and very experienced in the mining industry in Ghana.  He can take on the scope of works associated with both Greenfield or existing projects.  His work experience includes a senior mining engineer at African Underground Mining Services (AUMS), a quarry engineer at Consar Stone Quarry Ltd, a mining engineer at Fazo Minerals Resources Ltd, and an exploration geologist at Semafo Ghana Limited.  He holds a diploma in mining engineering from the University of Mines and Technology.  He is also a certified blast man in good standing and can plan and implement drilling and blasting projects effectively.  Working with heavy machinery and explosives, Mr. Norgah takes the health and safety issues seriously to the extent that he holds a certificate in Occupational Health and safety and First Aid Certificate.'),
-(4, 'Meet Our Team\r\n', 'We work to provide quality drilling and blasting services\r\n\r\n', 't3.jpg', 'Ms. Sename Kwame (Operations Manager)', 'Ms. Sename Kwame is the Operations Manager of the company in charge of the organization and allocation of resources for each approved project.  With exceptional interpersonal, project management, and administrative skill developed by her involvement on various projects, she is able to work seamlessly with the project manager, the company’s team of engineers, certified blastmen, and safety officers on multiple projects at a time.  She also works to promote the company’s safety culture by continually teaming up with the various project safety officers to ensure management commitment to safety and to the philosophy that all workers must go back to their families after the day’s work.  She holds a BSc in Economics from the University: University for Development Studies (UDS), Wa Campus.');
+INSERT INTO `portfolio` (`id`, `image`, `caption`, `heading_hover`, `subheading_hover`) VALUES
+(1, 'v1.jpg', 'Lettuce', 'Lettuce', 'Lettuce'),
+(2, 'v2.png', 'Tomato', 'Tomato', 'Tomato'),
+(3, 'v3.jpg', 'Spinach', 'Spinach', 'Spinach'),
+(4, 'v4.jpg', 'Carrot', 'Carrot', 'Carrot'),
+(5, 'v5.jpg', 'Sweet Pepper', 'Sweet Pepper', 'Sweet Pepper'),
+(6, 'v6.jpg', 'Okra', 'Okra', 'Okra'),
+(8, 'v7.png', 'Cucumber', 'Cucumber', 'Cucumber'),
+(9, 'v8.jpg', 'Chili Pepper', 'Chili Pepper', 'Chili Pepper'),
+(10, 'v9.jpg', 'EggPlant (Garden-Eggs)', 'EggPlant (Garden-Eggs)', 'EggPlant (Garden-Eggs)');
 
 -- --------------------------------------------------------
 
@@ -583,7 +430,17 @@ INSERT INTO `userlog` (`id`, `userId`, `username`, `userIp`, `logintime`) VALUES
 (3, 1, 'admin', 0x3a3a31, '2020-07-14 22:58:05'),
 (4, 1, 'admin', 0x3a3a31, '2020-07-15 14:53:49'),
 (5, 1, 'admin', 0x3a3a31, '2020-07-16 14:30:14'),
-(6, 1, 'admin', 0x3a3a31, '2020-07-17 12:23:54');
+(6, 1, 'admin', 0x3a3a31, '2020-07-17 12:23:54'),
+(7, 1, 'admin', 0x3a3a31, '2020-07-18 11:41:42'),
+(8, 1, 'admin', 0x3a3a31, '2020-07-19 00:15:31'),
+(9, 1, 'admin', 0x3a3a31, '2020-07-19 23:01:01'),
+(10, 1, 'admin', 0x3a3a31, '2020-07-20 00:26:04'),
+(11, 1, 'admin', 0x3a3a31, '2020-07-20 17:24:20'),
+(12, 3, 'admin1', 0x3a3a31, '2020-07-20 23:50:03'),
+(13, 3, 'admin1', 0x3a3a31, '2020-07-21 14:29:17'),
+(14, 3, 'admin1', 0x3a3a31, '2020-07-24 18:56:11'),
+(15, 3, 'admin1', 0x3a3a31, '2020-07-28 17:47:46'),
+(16, 3, 'admin1', 0x3a3a31, '2020-09-03 19:10:40');
 
 -- --------------------------------------------------------
 
@@ -608,7 +465,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `role`, `created_at`) VALUES
 (1, 'admin', '123', 'admin', 'admin', 'info@sterde.com', 'admin', '2020-06-29 08:18:30'),
-(2, 'test', '$2y$10$As1x1q.AVPwyyM7nj7sKLekJWPde5Q29/TrMyPRBbxZ3s8YnAL65.', '', '', '', '', '2020-06-29 09:28:21');
+(2, 'test', '$2y$10$As1x1q.AVPwyyM7nj7sKLekJWPde5Q29/TrMyPRBbxZ3s8YnAL65.', '', '', '', '', '2020-06-29 09:28:21'),
+(3, 'admin1', '$2y$10$w5J/rTwNepJxPQSH2EPvN.AIIJ7347KVpDCISPLVhaycSh2AIlBNy', '1234567', '', '', '', '2020-07-20 23:41:59');
 
 --
 -- Indexes for dumped tables
@@ -636,30 +494,6 @@ ALTER TABLE `aboutpage_slide`
 -- Indexes for table `aboutpage_strategic_Positioning`
 --
 ALTER TABLE `aboutpage_strategic_Positioning`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `aboutpage_strategy`
---
-ALTER TABLE `aboutpage_strategy`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `footer`
---
-ALTER TABLE `footer`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `gallerypage`
---
-ALTER TABLE `gallerypage`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `gallerypage_product`
---
-ALTER TABLE `gallerypage_product`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -711,12 +545,6 @@ ALTER TABLE `homepage_footer_products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `homepage_gallery`
---
-ALTER TABLE `homepage_gallery`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `homepage_order`
 --
 ALTER TABLE `homepage_order`
@@ -735,21 +563,15 @@ ALTER TABLE `homepage_products_pictures`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `homepage_services`
---
-ALTER TABLE `homepage_services`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `homepage_slide`
 --
 ALTER TABLE `homepage_slide`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `homepage_team`
+-- Indexes for table `portfolio`
 --
-ALTER TABLE `homepage_team`
+ALTER TABLE `portfolio`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -791,30 +613,6 @@ ALTER TABLE `aboutpage_slide`
 --
 ALTER TABLE `aboutpage_strategic_Positioning`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `aboutpage_strategy`
---
-ALTER TABLE `aboutpage_strategy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `footer`
---
-ALTER TABLE `footer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `gallerypage`
---
-ALTER TABLE `gallerypage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `gallerypage_product`
---
-ALTER TABLE `gallerypage_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `homepage_aboutus`
@@ -865,12 +663,6 @@ ALTER TABLE `homepage_footer_products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `homepage_gallery`
---
-ALTER TABLE `homepage_gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `homepage_order`
 --
 ALTER TABLE `homepage_order`
@@ -889,34 +681,28 @@ ALTER TABLE `homepage_products_pictures`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `homepage_services`
---
-ALTER TABLE `homepage_services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `homepage_slide`
 --
 ALTER TABLE `homepage_slide`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `homepage_team`
+-- AUTO_INCREMENT for table `portfolio`
 --
-ALTER TABLE `homepage_team`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `portfolio`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `userlog`
 --
 ALTER TABLE `userlog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
