@@ -1,6 +1,7 @@
 # jaseyFarms_sterde
 
 sterde workspace, Site in development
+Jasey farms, website for an agriculture based organization.
 
 jaseyfarmdb.sql contains table data to import the content for the site and admin dashboard to edit the text content ("strings").
 
