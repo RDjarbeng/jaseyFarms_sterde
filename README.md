@@ -1,7 +1,8 @@
 # jaseyFarms_sterde
+
 sterde workspace, Site in development
 
-jaseyfarms_admin_tables.sql contains table data to import the content for the sitea and admin dashboard
+jaseyfarmdb.sql contains table data to import the content for the site and admin dashboard to edit the text content ("strings").
 
 Preview site(before conversion to php, layout has been updated in php files)
 
